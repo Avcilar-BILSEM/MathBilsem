@@ -4,7 +4,31 @@ class Averages:
         pass
 
     def Standart(self,*args):
-        if isinstance(args[0],(int,float)):
-            return sum(args)/len(args)
+        if isinstance (args[0], (int, float)):
+            numbers = args
         else:
-            return sum(args[0])/len(args[0])
+            numbers = args[0]
+        return sum(numbers)/len(numbers)
+
+    def Geometric(self,*args):
+        if isinstance (args[0], (int, float)):
+            numbers=args
+        else:
+            numbers=args[0]
+        carpim=1
+        for number in numbers:
+            carpim*=number
+        return carpim**(1/len(numbers))
+
+    def Harmonic(self, *args):
+        if isinstance (args[0], (int, float)):
+            numbers = args
+        else:
+            numbers = args[0]
+
+        toplam=0
+        for number in numbers:
+            toplam+=1/number
+
+        return len(numbers)/(toplam)
+
