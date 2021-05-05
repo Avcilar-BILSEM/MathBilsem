@@ -17,13 +17,13 @@ class Series(Temel):
             self.fibonacci(n)
         return self.fibb[n]/self.fibb[n-1]
 
-    def tek(self,n):
+    def odd(self,n):
         if n>self.teksayilar[-1]:
             for i in range(self.teksayilar[-1]+2,n+1,2):
                 self.teksayilar.append(i)
         return self.teksayilar[0:n]
 
-    def cift(self,n):
+    def even(self,n):
         if n>self.ciftsayilar[-1]:
             for i in range(self.ciftsayilar[-1]+2,n+1,2):
                 self.ciftsayilar.append(i)
