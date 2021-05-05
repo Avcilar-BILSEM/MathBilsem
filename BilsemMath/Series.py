@@ -1,5 +1,5 @@
-from .Temel import Temel
-class Series(Temel):
+from .Std import *
+class Series():
 
     def __init__(self):
         self.fibb = [0,1]
@@ -9,7 +9,7 @@ class Series(Temel):
     def fibonacci(self,n):
         if len(self.fibb)<n:
             for i in range(len(self.fibb),n+1):
-                self.fibb.append(self.topla(self.fibb[i-2],self.fibb[i-1]))
+                self.fibb.append(topla(self.fibb[i-2],self.fibb[i-1]))
         return self.fibb[0:n]
 
     def goldenRatio(self,n):

@@ -3,10 +3,10 @@ import random
 class Temel:
 
     def __init__(self):
-        print("Temel Sınıfı Yüklendi")
+        pass
 
     def __del__(self):
-        print("Beni yıktın!")
+        pass
 
     def topla(self,*args):
         if isinstance (args[0], (int, float)):
