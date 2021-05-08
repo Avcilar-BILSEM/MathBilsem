@@ -27,11 +27,11 @@ def cikar ( *args):
     return args[0] - args[1]
 
 
-def kok (sayi, ust):
+def kok (sayi, ust=2):
     return sayi ** (1 / ust)
 
 
-def ust ( sayi, ust):
+def ust ( sayi, ust=2):
     return sayi ** ust
 
 

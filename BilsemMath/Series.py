@@ -3,7 +3,7 @@ Temel=Temel()
 class Series():
 
     def __init__(self):
-
+        self.asal=[2]
         self.fibb = [0,1]
         self.teksayilar=[1]
         self.ciftsayilar = [2]
@@ -54,3 +54,15 @@ class Series():
         for i in range(1, terim + 1):
             self.dizi.append(self.dizi[-1] * kat)
         return self.dizi
+
+    def asalSayilar(self,bit):
+        if self.asal[-1]<bit:
+            for i in range(self.asal[-1]+1,bit):
+                bolundu=False
+                for j in range(2,i):
+                    if i%j==0:
+                        bolundu=True
+                        break
+                if bolundu==False:
+                    self.asal.append(i)
+        return [item for item in self.asal if item < bit]
