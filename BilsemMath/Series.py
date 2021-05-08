@@ -31,4 +31,16 @@ class Series():
                 self.ciftsayilar.append(i)
         return self.ciftsayilar[0:n]
 
+    def create(self,a,b,c,bas,son):
+        if c - b == b - a:
+            self.dizi = [bas]
+            for i in range (bas, son + 1):
+                self.dizi.append (self.dizi[-1] + (b - a))
+
+        elif c / b == b / a:
+            self.dizi = [bas]
+            for i in range (bas, son + 1):
+                self.dizi.append (self.dizi[-1] * (b / a))
+        return self.dizi
+
 

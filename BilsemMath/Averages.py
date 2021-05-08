@@ -1,3 +1,4 @@
+from .rootfunctions import *
 class Averages:
     """Ertuğrul bu sınıfı yaz"""
     def __init__(self):
@@ -17,8 +18,8 @@ class Averages:
             numbers=args[0]
         carpim=1
         for number in numbers:
-            carpim*=number
-        return carpim**(1/len(numbers))
+            carpim=carp(carpim,number)
+        return ust(carpim,1/len(numbers))
 
     def Harmonic(self, *args):
         if isinstance (args[0], (int, float)):
