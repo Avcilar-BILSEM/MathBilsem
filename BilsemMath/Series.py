@@ -43,4 +43,14 @@ class Series():
                 self.dizi.append (self.dizi[-1] * (b / a))
         return self.dizi
 
+    def createArithmetic(self,bas,son, artis):
+        self.dizi = []
+        for i in range (bas, son + 1, artis):
+           self.dizi.append (i)
+        return self.dizi
 
+    def createGeometric(self, bas, terim, kat):
+        self.dizi = [bas]
+        for i in range(1, terim + 1):
+            self.dizi.append(self.dizi[-1] * kat)
+        return self.dizi
