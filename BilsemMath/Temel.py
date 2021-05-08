@@ -60,7 +60,6 @@ class Temel:
     def carpan(self,sayi):
         asallar=self.asalSayilar(sayi)
         asallar.append(sayi)
-        print(asallar)
 
         durum=sayi
         carpanlar={}
